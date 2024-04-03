@@ -25,11 +25,23 @@ Use a Bootstrap Carousel
 
 ## Fifth Page
     1Text: List -- Number:Symbol...
+        JS: Generate Array Number 01-99: Random Symbol
+            random 9 symbol: (!@#$%^&*?~)
+            For 01-99
+                if x%9=0
+                    push "#: random 9 symbol"
+                else
+                    random symbol (!@#$%^&*?~)
+                    push "#: random symbol"
+            end for
+            display array
     2Button: "Reveal" - Move to next slide.
     2Text: "Find your new number. ... Note the symbol beside the number"
     3Button: Go back to first slide
 
 ## Sixth Page
-    1Text: Symbol ... 
-    2Text: "Your symbol is:" Symbol of 9 factor
+    1Text: Symbol ...
+        JS: display random 9 symbol 
+    2Text: "Your symbol is:" 
+        JS: display random 9 symbol
     3Button: Go back to first slide

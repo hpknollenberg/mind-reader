@@ -9,12 +9,76 @@
     <!-- project styles -->
     <link rel="stylesheet" href="./css/style.css">
   </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage.
-    </p>
+  <body class="bg-primary">
+
+    <div id="slides" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1>I can read your mind</h1>
+          <p></p>
+          <div>
+            <button type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span>Go</span></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <h1>Pick a number from 01-99</h1>
+          <div>
+            <button type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span>Next</span></button>
+            <h6>when you have your number click next</h6>
+            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+              <span>Home</span></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <h1>Add both digits together to get a new number</h1>
+          <div>
+            <button type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span>Next</span></button>
+            <h6>Ex: 14 is 1 + 4 = 5</h6>
+            <h6>click next to proceed</h6>
+            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+              <span>Home</span></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <h1>Subtract your new number from the original number</h1>
+          <div>
+            <button type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span>Next</span></button>
+            <h6>Ex: 14 - 5 = 9</h6>
+            <h6>click next to proceed</h6>
+            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+              <span>Home</span></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <h1>0 - &</h1>
+          <h1>1 - @</h1>
+          <h1>2 - $</h1>
+          <h1>3 - B</h1>
+          <h1>...</h1>
+          <div>
+            <button type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span>Reveal</span></button>
+            <h6>Find your new number</h6>
+            <h6>Note the symbol beside the number</h6>
+            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+              <span>Home</span></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <h1>&</h1>
+          <div>
+            <h6>Your symbol is:</h6>
+            <h6>&</h6>
+            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+              <span>Home</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- BootStrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

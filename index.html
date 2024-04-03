@@ -9,68 +9,80 @@
     <!-- project styles -->
     <link rel="stylesheet" href="./css/style.css">
   </head>  
-  <body class="bg-primary">
+  <body class="bg-primary d-flex flex-column justify-content-between vh-100">
 
-    <div id="slides" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <h1>I can read your mind</h1>
-          <p></p>
-          <div>
-            <button id="go" type="button" data-bs-target="#slides" data-bs-slide="next">
-              <span>Go</span></button>
+    <div id="slides" class="carousel slide flex-grow-1 d-flex flex-column justify-content-between vh-100">
+      <div class="carousel-inner flex-grow-1 d-flex flex-column justify-content-between vh-100">
+        <div class="carousel-item active flex-grow-1 d-flex flex-column justify-content-between vh-100">
+          <div id="first-page" class="flex-grow-1 d-flex flex-column justify-content-between vh-100">
+            <h1>I can read your mind</h1>
+            <p class="flex-grow-1"></p>
+            <div>
+              <button id="go" type="button" data-bs-target="#slides" data-bs-slide="next">
+                <span>Go</span></button>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h1>Pick a number from 01-99</h1>
-          <div>
-            <button type="button" data-bs-target="#slides" data-bs-slide="next">
-              <span>Next</span></button>
-            <h6>when you have your number click next</h6>
-            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
-              <span>Home</span></button>
+          <div id="second-page">
+            <h1>Pick a number from 01-99</h1>
+            <div>
+              <button type="button" data-bs-target="#slides" data-bs-slide="next">
+                <span>Next</span></button>
+              <h6>when you have your number click next</h6>
+              <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+                <span>Home</span></button>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h1>Add both digits together to get a new number</h1>
-          <div>
-            <button type="button" data-bs-target="#slides" data-bs-slide="next">
-              <span>Next</span></button>
-            <h6>Ex: 14 is 1 + 4 = 5</h6>
-            <h6>click next to proceed</h6>
-            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
-              <span>Home</span></button>
+          <div id="third-page">
+            <h1>Add both digits together to get a new number</h1>
+            <div>
+              <button type="button" data-bs-target="#slides" data-bs-slide="next">
+                <span>Next</span></button>
+              <h6>Ex: 14 is 1 + 4 = 5</h6>
+              <h6>click next to proceed</h6>
+              <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+                <span>Home</span></button>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h1>Subtract your new number from the original number</h1>
-          <div>
-            <button type="button" data-bs-target="#slides" data-bs-slide="next">
-              <span>Next</span></button>
-            <h6>Ex: 14 - 5 = 9</h6>
-            <h6>click next to proceed</h6>
-            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
-              <span>Home</span></button>
+          <div class="fourth-page">
+            <h1>Subtract your new number from the original number</h1>
+            <div>
+              <button type="button" data-bs-target="#slides" data-bs-slide="next">
+                <span>Next</span></button>
+              <h6>Ex: 14 - 5 = 9</h6>
+              <h6>click next to proceed</h6>
+              <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+                <span>Home</span></button>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <ul id="symbols-inventory"></ul>
-          <div>
-            <button type="button" data-bs-target="#slides" data-bs-slide="next">
-              <span>Reveal</span></button>
-            <h6>Find your new number</h6>
-            <h6>Note the symbol beside the number</h6>
-            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
-              <span>Home</span></button>
+          <div class="fifth-page">
+            <ul id="symbols-inventory"></ul>
+            <div>
+              <button type="button" data-bs-target="#slides" data-bs-slide="next">
+                <span>Reveal</span></button>
+              <h6>Find your new number</h6>
+              <h6>Note the symbol beside the number</h6>
+              <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+                <span>Home</span></button>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <h1 id="nine-symbol-title"></h1>
-          <div>
-            <h6>Your symbol is:</h6>
-            <h6 id="nine-symbol" ></h6>
-            <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
-              <span>Home</span></button>
+          <div class="sixth-page">
+            <h1 id="nine-symbol-title"></h1>
+            <div>
+              <h6>Your symbol is:</h6>
+              <h6 id="nine-symbol" ></h6>
+              <button type="button" data-bs-target="#slides" data-bs-slide-to="0">
+                <span>Home</span></button>
+            </div>
           </div>
         </div>
       </div>

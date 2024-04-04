@@ -13,7 +13,7 @@
   
     <div id="slides" class="carousel slide">
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" id="first-slide">
           <div class="d-flex flex-column justify-content-between justify-content-md-center align-items-center vh-100">
             <h1>I can read your mind</h1>
             <br></br>
@@ -23,11 +23,11 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="second-slide">
           <div class="d-flex flex-column justify-content-between align-items-center vh-100">
               <h1>Pick a number <br>from <br class="d-lg-none">01 - 99</h1>
               <div class="d-flex flex-column align-items-center">
-                <button type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
+                <button id="next-two" type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
                   <span>NEXT</span></button>
                 <h6><br>when you have your number <br class="d-md-none">click next</h6>
               </div>
@@ -37,11 +37,11 @@
               </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="third-slide">
           <div class="d-flex flex-column justify-content-between align-items-center vh-100">
             <h1>Add both digits <br class="d-md-none">together to get a new number</h1>
             <div class="d-flex flex-column align-items-center">
-              <button type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
+              <button id="next-three" type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
                 <span>NEXT</span></button>
               <h6><br>Ex: 14 is 1 + 4 = 5</h6>
               <h6>click next to proceed</h6>
@@ -52,11 +52,11 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="fourth-slide">
           <div class="d-flex flex-column justify-content-between align-items-center vh-100">
             <h1 class=>Subtract your new number from the original number</h1>
             <div class="d-flex flex-column align-items-center">
-              <button type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
+              <button id="next-four" type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
                 <span>NEXT</span></button>
               <h6><br>Ex: 14 - 5 = 9</h6>
               <h6>click next to proceed</h6>
@@ -67,11 +67,11 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="fifth-slide">
           <div class="d-flex flex-column justify-content-between align-items-center vh-100">
             <div class="d-flex flex-column justify-content-center align-items-center vh-100">
               <ul id="symbols-inventory"></ul>
-              <button type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
+              <button id="reveal" type="button" data-bs-target="#slides" data-bs-slide="next" class="next">
                 <span>REVEAL</span></button>
               <h6><br>Find your new number</h6>
               <h6>Note the symbol beside the number</h6>
@@ -82,7 +82,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="sixth-slide">
           <div class="d-flex flex-column justify-content-between align-items-center vh-100">
               <h1 id="nine-symbol-title" class="d-flex flex-column justify-content-center vh-100"></h1>
             <div class="d-flex flex-column justify-content-end vh-100">

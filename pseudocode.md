@@ -45,3 +45,10 @@ Use a Bootstrap Carousel
     2Text: "Your symbol is:" 
         JS: display random 9 symbol
     3Button: Go back to first slide
+
+
+
+
+## Reload maintain page
+when button pressed to move to next slide, store slide number in local storage
+if refresh, get slide number and change class name to active

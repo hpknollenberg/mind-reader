@@ -65,13 +65,13 @@ function getRandomInteger(min, max) { //Generates a random number
 function generateSymbols() { //Generates an array of symbols, factors of 9 are always the same symbol, everything else is random
   let displayedSymbols = []; //Empties symbols list
   document.getElementById("symbols-inventory").innerHTML = ""; //Empties displayed symbols list
-  const nineSymbol = arraySymbol[getRandomInteger(0, 9)]; //assigns the symbol for factor of 9
+  const nineSymbol = arraySymbol[getRandomInteger(0, 10)]; //assigns the symbol for factor of 9
   localStorage.setItem("localNineSymbol", nineSymbol)
   for (let i = 0; i <= 99; i++) { //assigns a symbol to everything else
     if (i % 9 == 0) {
       displayedSymbols.push(`${i} : ${nineSymbol}`);
     } else {
-      let randomSymbol = arraySymbol[getRandomInteger(0, 9)];
+      let randomSymbol = arraySymbol[getRandomInteger(0, 10)];
       displayedSymbols.push(`${i} : ${randomSymbol}`);
     }
     const symbolsList = document.createElement("li"); //Creates list of symbols, adds one each time around the loop

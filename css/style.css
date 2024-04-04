@@ -5,8 +5,53 @@ body {
 }
 
 h1 {
-  font-style: italic;
-  color: pink;
+  font-size: 4rem;
+  color: grey;
+  text-align: center;
+  padding: 5px;
+}
+
+.home, .go, .restart {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  border-color: grey;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  font-size: 2rem;
+  color: lightskyblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.home {
+  font-size: 3.5rem;
+  padding-top: 5px;
+}
+
+.restart {
+  font-size: 1.5rem;
+}
+
+.next {
+  background-color: lightskyblue;
+  height: 100px;
+  width: 300px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h6 {
+  color: lightskyblue;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 #symbols-inventory {

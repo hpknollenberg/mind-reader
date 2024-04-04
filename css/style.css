@@ -56,10 +56,11 @@ h6 {
 
 #symbols-inventory {
   border: 1px solid;
-  height: 350px;
-  width: fit-content;
+  height: 250px;
+  width: 150px;
   overflow: scroll;
   padding: 10px;
+  font-size: 2rem;
 }
 
 #nine-symbol-title {

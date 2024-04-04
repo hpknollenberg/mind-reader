@@ -24,6 +24,8 @@ function getSlideOnRefresh() {
     case "6":
       document.getElementById("first-slide").className = "carousel-item";
       document.getElementById("sixth-slide").className = "carousel-item active";
+      document.getElementById("nine-symbol-title").innerHTML = localStorage.getItem("localNineSymbol");
+      document.getElementById("nine-symbol").innerHTML = localStorage.getItem("localNineSymbol");
       localStorage.setItem("localSlide", 6);
       break;
   }
@@ -54,7 +56,7 @@ for (let i = 0; i < homeClass.length; i++) {
 
 
 
-const arraySymbol = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "~"]
+const arraySymbol = ["👍", "🎶", "😍", "🤡", "🐵", "👁️", "🍕", "🚑", "🎃", "💂"]
 
 function getRandomInteger(min, max) { //Generates a random number
   return Math.floor(Math.random() * (max - min) + min);
@@ -64,7 +66,8 @@ function generateSymbols() { //Generates an array of symbols, factors of 9 are a
   let displayedSymbols = []; //Empties symbols list
   document.getElementById("symbols-inventory").innerHTML = ""; //Empties displayed symbols list
   const nineSymbol = arraySymbol[getRandomInteger(0, 9)]; //assigns the symbol for factor of 9
-  for (let i = 1; i <= 99; i++) { //assigns a symbol to everything else
+  localStorage.setItem("localNineSymbol", nineSymbol)
+  for (let i = 0; i <= 99; i++) { //assigns a symbol to everything else
     if (i % 9 == 0) {
       displayedSymbols.push(`${i} : ${nineSymbol}`);
     } else {
@@ -72,7 +75,7 @@ function generateSymbols() { //Generates an array of symbols, factors of 9 are a
       displayedSymbols.push(`${i} : ${randomSymbol}`);
     }
     const symbolsList = document.createElement("li"); //Creates list of symbols, adds one each time around the loop
-    const symbolsListItem = document.createTextNode(displayedSymbols[i - 1])
+    const symbolsListItem = document.createTextNode(displayedSymbols[i])
     symbolsList.appendChild(symbolsListItem);
     document.getElementById("symbols-inventory").appendChild(symbolsList);
   }

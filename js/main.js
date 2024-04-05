@@ -19,7 +19,17 @@ function getSlideOnRefresh() {
     case "5":
       document.getElementById("first-slide").className = "carousel-item";
       document.getElementById("fifth-slide").className = "carousel-item active";
+      let retrievedSymbolList = JSON.parse(localStorage.getItem("symbol-list"));
+      console.log(retrievedSymbolList);
+      for (let i = 0; i <= 99; i++) {
+        const symbolsList2 = document.createElement("li"); //Creates list of symbols, adds one each time around the loop
+        const symbolsListItem2 = document.createTextNode(retrievedSymbolList[i]);
+        symbolsList2.appendChild(symbolsListItem2);
+        document.getElementById("symbols-inventory").appendChild(symbolsList2);
+      }
       localStorage.setItem("localSlide", 5);
+      document.getElementById("nine-symbol-title").innerHTML = localStorage.getItem("localNineSymbol");
+      document.getElementById("nine-symbol").innerHTML = localStorage.getItem("localNineSymbol");
       break;
     case "6":
       document.getElementById("first-slide").className = "carousel-item";
@@ -37,8 +47,8 @@ let slide = 1;
 
 document.getElementById("go").addEventListener("click", () => { slide = 2; localStorage.setItem("localSlide", slide);}); //when moving from slide to slide, the slide number is stored locally
 document.getElementById("next-two").addEventListener("click", () => { slide = 3; localStorage.setItem("localSlide", slide);});
-document.getElementById("next-three").addEventListener("click", () => { slide = 4; localStorage.setItem("localSlide", slide);});
-document.getElementById("next-four").addEventListener("click", () => { slide = 5; localStorage.setItem("localSlide", slide);});
+document.getElementById("next-three").addEventListener("click", () => { slide = 4; localStorage.setItem("localSlide", slide,);});
+document.getElementById("next-four").addEventListener("click", () => { slide = 5; localStorage.setItem("localSlide", slide); generateSymbols();});
 document.getElementById("reveal").addEventListener("click", () => { slide = 6; localStorage.setItem("localSlide", slide);});
 
 
@@ -79,12 +89,11 @@ function generateSymbols() { //Generates an array of symbols, factors of 9 are a
     symbolsList.appendChild(symbolsListItem);
     document.getElementById("symbols-inventory").appendChild(symbolsList);
   }
+  localStorage.setItem("symbol-list", JSON.stringify(displayedSymbols));
   document.getElementById("nine-symbol-title").innerHTML = nineSymbol;
   document.getElementById("nine-symbol").innerHTML = nineSymbol; //Displays the corresponding symbol
 }
 
-if (localStorage.getItem("localSlide") != 6) {
-  generateSymbols();
-} 
+
   
 document.getElementById("go").addEventListener("click", generateSymbols); //Creates a new list of symbols if mindreader restarted

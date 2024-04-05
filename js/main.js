@@ -85,6 +85,6 @@ function generateSymbols() { //Generates an array of symbols, factors of 9 are a
 
 if (localStorage.getItem("localSlide") != 6) {
   generateSymbols();
-} else {
-  document.getElementById("go").addEventListener("click", generateSymbols); //Creates a new list of symbols if mindreader restarted
-}
+} 
+  
+document.getElementById("go").addEventListener("click", generateSymbols); //Creates a new list of symbols if mindreader restarted

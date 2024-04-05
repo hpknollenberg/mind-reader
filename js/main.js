@@ -19,7 +19,7 @@ function getSlideOnRefresh() {
     case "5":
       document.getElementById("first-slide").className = "carousel-item";
       document.getElementById("fifth-slide").className = "carousel-item active";
-      let retrievedSymbolList = JSON.parse(localStorage.getItem("symbol-list"));
+      let retrievedSymbolList = JSON.parse(localStorage.getItem("symbol-list")); //Retrieves array of current symbols from local storage
       console.log(retrievedSymbolList);
       for (let i = 0; i <= 99; i++) {
         const symbolsList2 = document.createElement("li"); //Creates list of symbols, adds one each time around the loop
@@ -48,7 +48,7 @@ let slide = 1;
 document.getElementById("go").addEventListener("click", () => { slide = 2; localStorage.setItem("localSlide", slide);}); //when moving from slide to slide, the slide number is stored locally
 document.getElementById("next-two").addEventListener("click", () => { slide = 3; localStorage.setItem("localSlide", slide);});
 document.getElementById("next-three").addEventListener("click", () => { slide = 4; localStorage.setItem("localSlide", slide,);});
-document.getElementById("next-four").addEventListener("click", () => { slide = 5; localStorage.setItem("localSlide", slide); generateSymbols();});
+document.getElementById("next-four").addEventListener("click", () => { slide = 5; localStorage.setItem("localSlide", slide); generateSymbols();}); //button generates symbols
 document.getElementById("reveal").addEventListener("click", () => { slide = 6; localStorage.setItem("localSlide", slide);});
 
 
@@ -89,7 +89,7 @@ function generateSymbols() { //Generates an array of symbols, factors of 9 are a
     symbolsList.appendChild(symbolsListItem);
     document.getElementById("symbols-inventory").appendChild(symbolsList);
   }
-  localStorage.setItem("symbol-list", JSON.stringify(displayedSymbols));
+  localStorage.setItem("symbol-list", JSON.stringify(displayedSymbols)); //Sends current array of symbols to local storage
   document.getElementById("nine-symbol-title").innerHTML = nineSymbol;
   document.getElementById("nine-symbol").innerHTML = nineSymbol; //Displays the corresponding symbol
 }
